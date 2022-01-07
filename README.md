@@ -2,7 +2,7 @@
 
 ### Projeto feito com o intuito de demonstrar e praticar consumos de APIs REST utilizando Axios juntamente com Vue JS.
 - [API utilizada](https://jsonplaceholder.typicode.com/users).
-- [Estilos](https://bulma.io/).
+- [Estilos utilizados](https://bulma.io/).
 
 [Aplicação rodando](https://consumoapivuejs.netlify.app/)
 
