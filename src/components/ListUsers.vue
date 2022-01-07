@@ -1,15 +1,16 @@
 <template>
     <div>
-        <List v-if="!loadingUsers">
+        <List v-if="!loadingUsers && users.length">
             <ListItem
                 v-for="item in users"
                 :key="item.id"
                 :item="item" 
             />
         </List>
-        <Columns centered v-else>
+        <Columns centered v-else-if="loadingUsers">
             <Loading />
         </Columns>
+        <NotFound v-else/>
     </div>
 </template>
 
@@ -23,6 +24,7 @@ import List from './elements/List.vue'
 import Columns from './layout/Columns.vue'
 import ListItem from './elements/ListItem.vue'
 import Loading from './elements/Loading.vue'
+import NotFound from './elements/NotFound.vue'
 
 export default {
     name: 'ListUsers',
@@ -36,7 +38,8 @@ export default {
         List,
         Columns,
         ListItem,
-        Loading
+        Loading,
+        NotFound
     },
     methods: {
         async getUsers() {
