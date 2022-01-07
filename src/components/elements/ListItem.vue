@@ -15,7 +15,12 @@
         </div>
         <div class="list-item-controls">
             <div class="buttons is-right">
-                <button class="button is-danger" @click="deleteUser">Deletar</button>
+                <button class="button is-danger" @click="deleteUser">
+                    <span class="icon is-small">
+                        <i class="fas fa-trash"></i>
+                    </span>
+                    <span>Deletar</span>
+                </button>
             </div>
         </div>
     </div>
