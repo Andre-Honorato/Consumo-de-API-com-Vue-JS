@@ -1,28 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <Hero fullHeight color="light">
+    <Container>
+      <Columns centered>
+        <Column size="6">
+          <Box>
+            <ListUsers />
+          </Box>
+        </Column>
+      </Columns>
+    </Container>
+  </Hero>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Box from './components/elements/Box.vue'
+import Hero from './components/layout/Hero.vue'
+import Container from './components/layout/Container.vue'
+import Columns from './components/layout/Columns.vue'
+import Column from './components/layout/Column.vue'
+import ListUsers from './components/ListUsers.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Box,
+    Hero,
+    Container,
+    Columns,
+    Column,
+    ListUsers
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
